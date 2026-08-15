@@ -14,3 +14,9 @@
 - **Hook de Agendamento (`hooks.py`)**: Registro da rotina na esteira de execução diária (`daily`) do Scheduler do Frappe.
 - **Auditoria e Logs**: Log estruturado de contagem de documentos atualizados, a vencer e vencidos.
 - **Validação**: Execução via CLI (`bench execute`) validada com sucesso.
+
+### Módulo: Automação e Scheduler de Validades (RH/Compliance)
+- **Serviço de Background (`tasks.py`)**: Rotina `verificar_vencimento_documentos` para varredura diária de prazos de vigência.
+- **Hook de Agendamento (`hooks.py`)**: Registro da rotina na esteira de execução diária (`daily`) do Scheduler do Frappe.
+- **Auditoria e Logs**: Log estruturado de contagem de documentos atualizados, a vencer e vencidos.
+- **Validação**: Execução via CLI (`bench execute`) validada com sucesso.
