@@ -1,0 +1,213 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:{tipo_documento}-{colaborador}-{#####}",
+ "creation": "2026-08-15 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_colaborador",
+  "colaborador",
+  "nome_colaborador",
+  "column_break_colab",
+  "tipo_documento",
+  "status_aprovacao",
+  "section_detalhes",
+  "numero_documento",
+  "orgao_emissor",
+  "column_break_datas",
+  "data_emissao",
+  "data_validade",
+  "nao_expira",
+  "status_validade",
+  "section_arquivo",
+  "anexo_documento",
+  "observacoes",
+  "section_auditoria",
+  "validado_por",
+  "column_break_audit",
+  "data_validacao"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_colaborador",
+   "fieldtype": "Section Break",
+   "label": "Identifica\u00e7\u00e3o do Colaborador"
+  },
+  {
+   "fieldname": "colaborador",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Colaborador",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "colaborador.employee_name",
+   "fieldname": "nome_colaborador",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nome do Colaborador",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_colab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_documento",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tipo de Documento",
+   "options": "Prime Tipo de Documento",
+   "reqd": 1
+  },
+  {
+   "default": "Pendente",
+   "fieldname": "status_aprovacao",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status da Valida\u00e7\u00e3o",
+   "options": "Pendente\nAprovado\nRejeitado"
+  },
+  {
+   "fieldname": "section_detalhes",
+   "fieldtype": "Section Break",
+   "label": "Dados do Documento"
+  },
+  {
+   "fieldname": "numero_documento",
+   "fieldtype": "Data",
+   "label": "N\u00famero / Registro"
+  },
+  {
+   "fieldname": "orgao_emissor",
+   "fieldtype": "Data",
+   "label": "\u00d3rg\u00e3o Emissor / UF"
+  },
+  {
+   "fieldname": "column_break_datas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_emissao",
+   "fieldtype": "Date",
+   "label": "Data de Emiss\u00e3o"
+  },
+  {
+   "depends_on": "eval:!doc.nao_expira",
+   "fieldname": "data_validade",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Data de Validade"
+  },
+  {
+   "default": "0",
+   "fieldname": "nao_expira",
+   "fieldtype": "Check",
+   "label": "Documento N\u00e3o Expira"
+  },
+  {
+   "fieldname": "status_validade",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status da Validade",
+   "options": "V\u00e1lido\nA Vencer\nVencido\nN\u00e3o se Aplica",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_arquivo",
+   "fieldtype": "Section Break",
+   "label": "Anexo e Observa\u00e7\u00f5es"
+  },
+  {
+   "fieldname": "anexo_documento",
+   "fieldtype": "Attach",
+   "label": "Anexar Arquivo (PDF / Imagem)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observacoes",
+   "fieldtype": "Small Text",
+   "label": "Observa\u00e7\u00f5es"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_auditoria",
+   "fieldtype": "Section Break",
+   "label": "Auditoria de Aprova\u00e7\u00e3o"
+  },
+  {
+   "fieldname": "validado_por",
+   "fieldtype": "Link",
+   "label": "Validado Por",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_audit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_validacao",
+   "fieldtype": "Datetime",
+   "label": "Data da Valida\u00e7\u00e3o",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Prime ERP",
+ "name": "Prime Documento do Colaborador",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_name_format": "",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
