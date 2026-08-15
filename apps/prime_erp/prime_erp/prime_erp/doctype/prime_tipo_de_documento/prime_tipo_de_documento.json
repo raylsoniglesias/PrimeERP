@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:tipo_documento",
+ "creation": "2026-08-14 14:49:38.331868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tipo_documento",
+  "categoria",
+  "descricao",
+  "possui_validade",
+  "prazo_validade_dias",
+  "obrigatorio_admissao",
+  "obrigatorio_funcao",
+  "ativo"
+ ],
+ "fields": [
+  {
+   "fieldname": "tipo_documento",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tipo de Documento",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "categoria",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Categoria",
+   "options": "Pessoal\nAdmissional\nTrabalhista\nSa\u00fade Ocupacional\nSST\nEscolaridade\nTreinamento\nVe\u00edculo\nEmpresa\nOutros",
+   "reqd": 1
+  },
+  {
+   "fieldname": "descricao",
+   "fieldtype": "Small Text",
+   "label": "Descri\u00e7\u00e3o"
+  },
+  {
+   "default": "0",
+   "fieldname": "possui_validade",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Possui Validade"
+  },
+  {
+   "fieldname": "prazo_validade_dias",
+   "fieldtype": "Int",
+   "label": "Prazo de Validade (dias)"
+  },
+  {
+   "default": "0",
+   "fieldname": "obrigatorio_admissao",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Obrigat\u00f3rio na Admiss\u00e3o"
+  },
+  {
+   "default": "0",
+   "fieldname": "obrigatorio_funcao",
+   "fieldtype": "Check",
+   "label": "Obrigat\u00f3rio por Fun\u00e7\u00e3o"
+  },
+  {
+   "default": "1",
+   "fieldname": "ativo",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Ativo"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-14 14:49:38.331868",
+ "modified_by": "Administrator",
+ "module": "Prime ERP",
+ "name": "Prime Tipo de Documento",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

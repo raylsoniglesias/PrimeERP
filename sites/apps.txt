@@ -1,0 +1,5 @@
+frappe
+erpnext
+prime_erp
+hrms
+erpnext_fiscal_br

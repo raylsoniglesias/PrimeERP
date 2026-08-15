@@ -1,0 +1,80 @@
+# ============================================================
+# PrimeERP / Frappe Bench
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environment
+env/
+
+# Node
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Build / generated assets
+dist/
+build/
+.cache/
+*.map
+
+# Logs
+logs/
+sites/*/logs/
+*.log
+
+# Runtime
+config/pids/
+*.pid
+*.sock
+
+# Frappe generated/runtime files
+sites/*/private/files/
+sites/*/private/backups/
+sites/*/public/files/
+
+# Database / local runtime
+*.sql
+*.sql.gz
+*.sql.zst
+*.dump
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Frappe site secrets
+sites/*/site_config.json
+
+# Python packaging
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Internal Git repositories
+apps/*/.git/

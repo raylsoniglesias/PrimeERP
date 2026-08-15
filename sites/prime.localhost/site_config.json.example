@@ -1,0 +1,7 @@
+{
+  "db_name": "SEU_DB_NAME",
+  "db_password": "SUA_DB_PASSWORD",
+  "db_type": "mariadb",
+  "db_user": "SEU_DB_USER",
+  "developer_mode": 1
+}
